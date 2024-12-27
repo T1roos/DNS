@@ -21,8 +21,8 @@ class ProductCreateView(CreateView):
 class ProductUpdateView(UpdateView):
     model = Product
     fields = "__all__"
-    template_name = ''
-    success_url = reverse_lazy('')
+    template_name = "update_product.html"
+    success_url = reverse_lazy('main-page')
 
 
 class ProductDeleteView(DeleteView):
