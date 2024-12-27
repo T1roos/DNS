@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 class Product(models.Model):
     name = models.CharField(max_length=255, verbose_name="Название товара")
@@ -11,10 +12,6 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-
-
-from django.conf import settings
-from django.db import models
 
 class Order(models.Model):
     STATUS_CHOICES = [
@@ -37,8 +34,6 @@ class Order(models.Model):
 
 
 
-from django.db import models
-from django.conf import settings
 
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Пользователь")
