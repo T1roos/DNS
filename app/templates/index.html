@@ -9,13 +9,14 @@
     <title>Main Page</title>
 </head>
 <body>
+{% for product in products %}
 <nav class="nav">
   <a class="nav-link active" aria-current="page" href="{% url 'create-product' %}">Create</a>
-  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link" href="{% url 'update-product' product.pk %}">Update</a>
   <a class="nav-link" href="#">Link</a>
   <a class="nav-link disabled" aria-disabled="true">Disabled</a>
 </nav>
-    {% for product in products %}
+
     <h2>{{ product.name }}</h2>
     <p>{{ product.description }}</p>
     <p>{{ product.price }}</p>
