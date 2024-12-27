@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.nav{
+    padding-left: 500px;
+    display: flex;
+    gap: 300px;
+    font-size: 60px;
+}
+
