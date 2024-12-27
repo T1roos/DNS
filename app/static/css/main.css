@@ -11,3 +11,14 @@
     font-size: 60px;
 }
 
+.product{
+    display: flex;
+    gap: 400px;
+    padding-top: 200px;
+}
+
+.pr1{
+    background-color: orange;
+    padding: 20px;
+    border-radius: 30px;
+}

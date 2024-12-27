@@ -9,23 +9,23 @@
     <title>Main Page</title>
 </head>
 <body>
-<div class='container'>
-  <nav class="nav">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
-    <a class="nav-link" href="#">Link</a>
-    <a class="nav-link" href="#">Link</a>
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-  </nav>
-  <div class='product'>
-      {% for product in products %}
-      <h2>{{ product.name }}</h2>
-      <p>{{ product.description }}</p>
-      <p>{{ product.price }}</p>
-      <p>{{ product.stock }}</p>
-      <p>{{ product.created_at }}</p>
-      <p>{{ product.updated_at }}</p>
-      {% endfor %}
-  </div>
+<nav class="nav">
+  <a class="nav-link active" aria-current="page" href="{% url 'create-product' %}">Create</a>
+  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+</nav>
+<div class='product'>
+    {% for product in products %}
+    <div class='pr1'>
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p>{{ product.price }}</p>
+    <p>{{ product.stock }}</p>
+    <p>{{ product.created_at }}</p>
+    <p>{{ product.updated_at }}</p>
+    </div>
+    {% endfor %}
 </div>
 </body>
 </html>
